@@ -1,9 +1,8 @@
-import react from 'react';
+import React from 'react';
 
-const Photo = props =>
+const Photo = (props) =>
         <figure className='grid-figure'>
-          'I am a photo'
+          I am a photo
         </figure>
 
-
-export default Photo
+export default Photo;

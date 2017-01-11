@@ -10,7 +10,7 @@ function mapStateToProps (state) {
   comments: state.comments
   }
 }
-function mapDispatchToProps (state) {
+function mapDispatchToProps (dispatch) {
   return bindActionCreators(actionCreators, dispatch)
 
 }

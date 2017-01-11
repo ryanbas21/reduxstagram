@@ -25,4 +25,4 @@ function deleteComment(postid,i){
   }
 }
 
- module.exports = { increment,deleteComment,addComment }
+ module.exports = { increment, deleteComment, addComment }

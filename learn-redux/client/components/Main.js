@@ -4,9 +4,6 @@ import { Link } from 'react-router'
 import PhotoGrid from './PhotoGrid'
 import Single from './Single'
 class Main extends Component {
-  constructor() {
-    super();
-  }
   render() {
     return (
     <div>
@@ -17,4 +14,4 @@ class Main extends Component {
   }
 }
 
-export default Main
+export default Main;

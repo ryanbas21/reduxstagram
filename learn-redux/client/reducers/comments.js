@@ -1,7 +1,6 @@
-function Comments (state = [], action) {
+function comments (state = [], action) {
 
   return state;
 }
 
-export default Comments
- 
+export default comments
