@@ -3,6 +3,7 @@ const INCREMENT = 'INCREMENT',
  REMOVE_COMMENT = 'REMOVE_COMMENT';
 
 function increment(index){
+  console.log('hits!')
   return {
     type: INCREMENT,
     index
