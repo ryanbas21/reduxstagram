@@ -1,6 +1,6 @@
 const INCREMENT = 'INCREMENT',
  ADD_COMMENT = 'ADD_COMMENT'
- REMOVE_COMMENT = 'REMOVE_COMMENT'
+ REMOVE_COMMENT = 'REMOVE_COMMENT';
 
 function increment(index){
   return {
