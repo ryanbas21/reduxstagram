@@ -6,3 +6,4 @@ function Posts (state = [], action) {
 }
 
 export default Posts
+ 

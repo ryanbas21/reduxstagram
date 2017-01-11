@@ -10,7 +10,7 @@ import store, { history } from './store'
 const router =  (
   <Provider store={store} >
   <Router history={history}>
-    <Route path='/' component={Main}>
+    <Route path='/' component={App}>
       <IndexRoute component={PhotoGrid} />
       <Route path='/view/:postid' component={Single} />
     </Route>
@@ -19,4 +19,4 @@ const router =  (
 )
 
 
-render(router,document.getElementById('root'))
+render(router, document.getElementById('root'))

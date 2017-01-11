@@ -6,14 +6,13 @@ import Main from './Main'
 
 function mapStateToProps (state) {
   return {
-  posts: state.posts
+  posts: state.posts,
   comments: state.comments
   }
 }
 function mapDispatchToProps (state) {
-  return {
-    bindActionCreators(actionCreators, dispatch)
-  }
+  return bindActionCreators(actionCreators, dispatch)
+
 }
 const App = connect(mapStateToProps, mapDispatchToProps)(Main)
 
