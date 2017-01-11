@@ -3,24 +3,25 @@ import { Link } from 'react-router'
 import CSSTransitionGroup from 'react-addons-css-transition-group'
 const Photo = (props) => {
         console.log(props)
+        const { post, i, comments } = props
         return (
         <figure className='grid-figure'>
           <div className='grid-photo-wrap'>
-           <Link to={`/view/${props.post.code}`}>
-            <img src={props.post.display_src} alt={props.post.caption} className='grid-photo'/>
+           <Link to={`/view/${post.code}`}>
+            <img src={post.display_src} alt={post.caption} className='grid-photo'/>
           </Link>
           <CSSTransitionGroup transitionName='like' transitionEnterTimeout={500} transitionLeaveTimeout={500}>
-                  <span key={props.post.likes} className="likes-heart">{props.post.likes}</span>
+                  <span key={post.likes} className="likes-heart">{post.likes}</span>
           </CSSTransitionGroup>
          </div>
          <figcaption>
-                 <p>{props.post.caption}</p>
+                 <p>{post.caption}</p>
                  <div className='control-buttons'>
-                  <button onClick={() => props.increment(props.i)} className='likes'>&hearts; {props.post.likes}</button>
-                  <Link className='button' to={`/view/{props.post.code}`}>
+                  <button onClick={() => props.increment(props.i)} className='likes'>&hearts; {post.likes}</button>
+                  <Link className='button' to={`/view/${post.code}`}>
                    <span className='comment-count'>
                         <span className='speech-buble'>
-                        {props.comments[props.post.code] ? props.comments[props.post.code].length : 0}
+                        {comments[post.code] ? comments[post.code].length : 0}
                         </span>
                    </span>
                   </Link>
@@ -28,5 +29,4 @@ const Photo = (props) => {
          </figcaption>
  </figure>
  )}
-
 export default Photo;
