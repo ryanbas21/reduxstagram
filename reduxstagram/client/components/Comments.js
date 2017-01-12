@@ -11,7 +11,7 @@ renderComment(comment,index){
     <div className='comment'>
       <p><strong>{comment.user}</strong>
       {comment.text}
-      <button className='remove-comment' onClick={() => this.props.removeComment(this.props.params.postId, index)}>&times;</button>
+      <button className='remove-comment' onClick={() => this.props.removeComment(this.props.params.postid, index)}>&times;</button>
       </p>
     </div>
   )
