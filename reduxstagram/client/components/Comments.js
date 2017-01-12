@@ -9,9 +9,9 @@ class Comments extends Component {
 renderComment(comment,index){
   return (
     <div className='comment'>
-      <p><strong>comment.user</strong>
+      <p><strong>{comment.user}</strong>
       {comment.text}
-      <button className='remove-comment'>&times;</button>
+      <button className='remove-comment' onClick={() => this.props.removeComment(this.props.params.postId, index)}>&times;</button>
       </p>
     </div>
   )
@@ -23,7 +23,8 @@ handleSubmit(e) {
   const comment = this.refs.comment.value
   console.log('submitting the form');
   console.log(postid, author, comment);
-
+  this.props.addComment(postid,author,comment)
+  this.refs.commentForm.reset();
 }
 render(){
   return (

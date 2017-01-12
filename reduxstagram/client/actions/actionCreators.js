@@ -3,13 +3,13 @@ const INCREMENT = 'INCREMENT',
  REMOVE_COMMENT = 'REMOVE_COMMENT';
 
 function increment(index){
-  console.log('hits!')
   return {
     type: INCREMENT,
     index
   }
 }
 function addComment(postid,author,comment) {
+  console.log('dispatching add comment');
   return {
     type: ADD_COMMENT,
     postid,
@@ -18,7 +18,8 @@ function addComment(postid,author,comment) {
   }
 }
 
-function deleteComment(postid,i){
+function removeComment(postid,i){
+  console.log('removing a comment');
   return {
     type: REMOVE_COMMENT,
     postid,
@@ -26,4 +27,4 @@ function deleteComment(postid,i){
   }
 }
 
- module.exports = { increment, deleteComment, addComment }
+ module.exports = { increment, removeComment, addComment }
