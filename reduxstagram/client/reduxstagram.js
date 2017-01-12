@@ -11,8 +11,8 @@ const router =  (
   <Provider store={store} >
   <Router history={history}>
     <Route path='/' component={App}>
-      <IndexRoute component={PhotoGrid}></IndexRoute>
-      <Route path='/view/:POSTID' component={Single}></Route>
+      <IndexRoute component={PhotoGrid} />
+      <Route path='/view/:postid' component={Single} />
     </Route>
   </Router>
 </Provider>
