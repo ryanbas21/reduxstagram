@@ -6,9 +6,11 @@ const Single = (props) => {
     console.log(props);
     const i = props.posts.findIndex( (post) => post.code === postid)
     const post = props.posts[i];
+    const postComments = props.comments[postid] || [];
     return (
     <div className='single-photo'>
         <Photo i={i} post={post} {...props} />
+        <Comments postComments={postComments} {...props}/>
     </div>
     )
 }
