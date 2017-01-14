@@ -4,14 +4,17 @@ class Comments extends Component {
   constructor() {
     super()
     this.handleSubmit = this.handleSubmit.bind(this)
-    this.renderComment = this.renderComment.bind(this);
+    this.renderComment = this.renderComment.bind(this)
   }
 renderComment(comment,index){
   return (
     <div className='comment'>
       <p><strong>{comment.user}</strong>
       {comment.text}
-      <button className='remove-comment' onClick={() => this.props.removeComment(this.props.params.postid, index)}>&times;</button>
+      <button className='remove-comment'
+        onClick={() => this.props.removeComment
+        (this.props.params.postid, index)}>
+        &times;</button>
       </p>
     </div>
   )

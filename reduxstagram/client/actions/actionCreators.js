@@ -9,7 +9,6 @@ function increment(index){
   }
 }
 function addComment(postid,author,comment) {
-  console.log('dispatching add comment');
   return {
     type: ADD_COMMENT,
     postid,
@@ -19,7 +18,6 @@ function addComment(postid,author,comment) {
 }
 
 function removeComment(postid,i){
-  console.log('removing a comment');
   return {
     type: REMOVE_COMMENT,
     postid,
